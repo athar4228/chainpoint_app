@@ -1,24 +1,28 @@
-# README
+ChainBlockerApp
+======
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ChainBlockerApp is a web based application that takes users badge information, creates a hash code out of it and submit the hash to Chainpoint endpoint. Upon successful submission, response from API is listed on user interface.
 
-Things you may want to cover:
 
-* Ruby version
+Ruby version
+--------
+    2.6.0
 
-* System dependencies
+Rails version
+--------
+    6.0.1
 
-* Configuration
+How to run the test suite
+--------
+    rspec
 
-* Database creation
+Future Additions
+--------
 
-* Database initialization
+  - Add badge table to save badge information
+  - Add states and state machine(aasm) to handle following states for badge:
+    - initialised
+    - created
+    - submitted
+    - failed
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
