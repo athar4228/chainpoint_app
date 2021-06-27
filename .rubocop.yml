@@ -91,3 +91,6 @@ Style/GuardClause:
 
 Style/BlockComments:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
