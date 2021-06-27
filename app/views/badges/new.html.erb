@@ -1,3 +1,35 @@
 <div class='container'>
   <h1>Submit Badge</h1>
+
+  <div class='form-container'>
+    <%= form_for @badge, method: :post do |f| %>
+
+      <% if f.object.errors.present? %>
+        <% f.object.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      <% end %>
+
+      <div class='field'>
+        <%= f.label :issue_date, 'Badge Issuance Date' %>
+        <%= f.date_field :issue_date, min: '2000-01-01',  onkeydown: "event.preventDefault()", required: true %>
+      </div>
+
+      <div class='field'>
+        <%= f.label :name, 'Badge Recipient Name' %>
+        <%= f.text_field :name, required: true %>
+      </div>
+
+      <div class='field'>
+        <%= f.label :name, 'Badge UUID' %>
+        <%= f.text_field :uuid, required: true, pattern: "[a-f0-9]{8}-([a-f0-9]{4}-){3}[a-f0-9]{12}" %>
+      </div>
+
+      <div class='field'>
+        <%= f.submit 'Submit to Chainpoint' %>
+      </div>
+    <% end %>
+  </div>
 </div>

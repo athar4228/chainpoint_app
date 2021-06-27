@@ -40,6 +40,8 @@ group :development, :test do
   gem 'rubocop', '~> 1.17.0'
   gem 'rubocop-rspec', '~> 2.4.0'
   gem 'shoulda'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

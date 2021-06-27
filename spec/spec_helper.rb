@@ -15,6 +15,9 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'vcr'
+require 'webmock/rspec'
+
 RSpec.configure do |config|
   config.before(:all) do
     FactoryBot.reload

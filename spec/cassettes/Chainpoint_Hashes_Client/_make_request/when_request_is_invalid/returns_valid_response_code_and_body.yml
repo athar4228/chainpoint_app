@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://3.136.178.15/hashes
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - 3.136.178.15
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Server:
+      - chainpoint-node
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 27 Jun 2021 14:33:54 GMT
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":"InvalidArgument","message":"invalid JSON body, missing hashes"}'
+  recorded_at: Sun, 27 Jun 2021 14:33:53 GMT
+- request:
+    method: post
+    uri: http://3.136.178.15/hashes
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - 3.136.178.15
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Server:
+      - chainpoint-node
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 27 Jun 2021 14:33:55 GMT
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"code":"InvalidArgument","message":"invalid JSON body, missing hashes"}'
+  recorded_at: Sun, 27 Jun 2021 14:33:54 GMT
+recorded_with: VCR 6.0.0

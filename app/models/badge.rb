@@ -9,4 +9,12 @@ class Badge
   validates :name, presence: true
   validates :uuid, presence: true, format: { with: /[a-f0-9]{8}-([a-f0-9]{4}-){3}[a-f0-9]{12}/ }
   validates :issue_date, presence: true
+
+  def chainpoint_hash_data
+    {
+      'name' => name,
+      'uuid' => uuid,
+      'issue_date' => issue_date.to_s
+    }
+  end
 end
