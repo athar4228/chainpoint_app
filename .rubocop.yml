@@ -88,3 +88,6 @@ Style/FrozenStringLiteralComment:
 
 Style/GuardClause:
   Enabled: false
+
+Style/BlockComments:
+  Enabled: false
